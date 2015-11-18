@@ -38,6 +38,7 @@
     <None Include="Customizations\Version.props" />
     <None Include="NuSpec\TemplateShared.nuspec" />
     <None Include="packages.config" />
+    <None Include="releaseProcessScript.config" />
     <None Include="Remotion.build" />
     <None Include="Remotion.Local.build" />
     <None Include="Remotion.Server.build" />
@@ -48,6 +49,14 @@
   <ItemGroup>
     <Reference Include="Remotion.BuildScript">
       <HintPath>..\packages\Remotion.BuildScript.2.0.0-alpha006\lib\net45\Remotion.BuildScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.BuildTools.MSBuildTasks">
+      <HintPath>..\packages\ReleaseProcessScript.1.0.0\lib\Remotion.BuildTools.MSBuildTasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\ReleaseProcessScript.1.0.0\lib\RestSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
